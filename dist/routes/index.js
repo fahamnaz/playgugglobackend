@@ -1,0 +1,16 @@
+import { Router } from 'express';
+import { childRouter } from './childRoutes.js';
+import { contentRouter } from './contentRoutes.js';
+import { dashboardRouter } from './dashboardRoutes.js';
+import { healthRouter } from './healthRoutes.js';
+import { notificationRouter } from './notificationRoutes.js';
+import { seedRouter } from './seedRoutes.js';
+import { subjectRouter } from './subjectRoutes.js';
+export const apiRouter = Router();
+apiRouter.use('/health', healthRouter);
+apiRouter.use('/seed', seedRouter);
+apiRouter.use('/children', childRouter);
+apiRouter.use('/subjects', subjectRouter);
+apiRouter.use('/content', contentRouter);
+apiRouter.use('/dashboard', dashboardRouter);
+apiRouter.use('/notifications', notificationRouter);

@@ -1,0 +1,25 @@
+{
+  "name": "play-gugglu-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "seed": "tsx src/seed/runSeed.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "mongoose": "^8.16.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3"
+  }
+}
